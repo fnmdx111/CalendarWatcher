@@ -28,4 +28,3 @@
 			android:id="@+id/events_info" />
 
 </ScrollView>
-
