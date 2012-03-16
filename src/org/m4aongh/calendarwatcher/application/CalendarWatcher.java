@@ -1,6 +1,9 @@
 package org.m4aongh.calendarwatcher.application;
 
 import android.app.Application;
+import org.m4aongh.calendarwatcher.data.Calendar;
+
+import java.util.List;
 
 /**
  * User: chsc4698@gmail.com
@@ -9,4 +12,7 @@ import android.app.Application;
  */
 public class CalendarWatcher extends Application {
 
+	public List<Calendar> checkedCalendars;
+
+	public String globalRingerMode;
 }

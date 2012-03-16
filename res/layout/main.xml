@@ -1,34 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:fadeScrollbars="true"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		style="@style/FillParent">
 	<LinearLayout
-			style="@style/FillParent"
-			android:orientation="vertical">
-
-	<TextView
-			style="@style/WrapContent"
-			android:textSize="17sp"
-			android:text="@string/starting_date" />
-	<DatePicker
-			style="@style/WrapHeightFillWidth"
-			android:id="@+id/starting_date_picker" />
-	<TextView
-			style="@style/WrapContent"
-			android:textSize="17sp"
-			android:text="@string/ending_date" />
-	<DatePicker
-			style="@style/WrapHeightFillWidth"
-			android:id="@+id/ending_date_picker" />
-	<Button
-			android:layout_margin="20dip"
-			style="@style/WrapHeightFillWidth"
-			android:id="@+id/retrieve"
-			android:text="@string/retrieve" />
-	<TextView
-			style="@style/FillParent"
-			android:id="@+id/events_info" />
-
+			android:layout_alignParentTop="true"
+			android:orientation="vertical"
+			style="@style/FillParent">
+		<ListView
+				android:id="@+id/calendar_list"
+				android:layout_weight="1"
+				style="@style/FillParent" />
+		<LinearLayout
+				android:layout_weight="1"
+				android:orientation="vertical"
+				style="@style/FillParent">
+			<TextView
+					android:text="@string/ringer_mode"
+					android:layout_margin="15dip"
+					style="@style/WrapContent" />
+			<LinearLayout
+					style="@style/WrapHeightFillWidth"
+					android:orientation="horizontal">
+				<ToggleButton
+						android:id="@+id/original_mode"
+						android:layout_marginLeft="10dip"
+						android:layout_marginRight="10dip"
+						android:textOff="@string/dont_modify"
+						android:textOn="@string/dont_modify"
+						style="@style/WrapHeightFillWidth"
+						android:layout_weight="1" />
+				<ToggleButton
+						android:id="@+id/vibrate_mode"
+						android:layout_marginLeft="10dip"
+						android:layout_marginRight="10dip"
+						android:textOff="@string/vibrate"
+						android:textOn="@string/vibrate"
+						style="@style/WrapHeightFillWidth"
+						android:layout_weight="1" />
+				<ToggleButton
+						android:id="@+id/silent_mode"
+						android:layout_marginLeft="10dip"
+						android:layout_marginRight="10dip"
+						android:textOff="@string/silent"
+						android:textOn="@string/silent"
+						style="@style/WrapHeightFillWidth"
+						android:layout_weight="1" />
+			</LinearLayout>
+			<RelativeLayout
+					android:layout_margin="15dip"
+					style="@style/WrapHeightFillWidth">
+				<TextView
+						android:text="@string/service_status"
+						android:layout_alignParentLeft="true"
+						style="@style/WrapContent" />
+				<TextView
+						android:id="@+id/service_status"
+						android:text="@string/down"
+						android:textColor="#ff0000"
+						android:layout_alignParentRight="true"
+						style="@style/WrapContent" />
+			</RelativeLayout>
+			<LinearLayout
+					style="@style/WrapHeightFillWidth"
+					android:orientation="horizontal">
+				<Button
+						android:id="@+id/start_service"
+						android:layout_marginLeft="10dip"
+						android:layout_marginRight="10dip"
+						android:text="@string/start_service"
+						style="@style/WrapHeightFillWidth"
+						android:layout_weight="1" />
+				<Button
+						android:id="@+id/stop_service"
+						android:layout_marginLeft="10dip"
+						android:layout_marginRight="10dip"
+						android:text="@string/stop_service"
+						style="@style/WrapHeightFillWidth"
+						android:layout_weight="1" />
+			</LinearLayout>
+		</LinearLayout>
 	</LinearLayout>
-</ScrollView>
+	<TextView
+			style="@style/WrapContent"
+			android:layout_alignParentBottom="true"
+			android:layout_centerHorizontal="true"
+			android:text="@string/copyright" />
+</RelativeLayout>

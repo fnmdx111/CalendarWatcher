@@ -27,8 +27,8 @@ public class EventsQuerier extends Querier<Event> {
 			return new Event(
 					cursor.getString(0),
 					!cursor.getString(1).equals("0"),
-					String.valueOf(cursor.getLong(2)),
-					String.valueOf(cursor.getLong(3))
+					cursor.getLong(2),
+					cursor.getLong(3)
 			);
 		}
 	};

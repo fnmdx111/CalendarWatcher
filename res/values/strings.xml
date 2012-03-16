@@ -7,4 +7,13 @@
 	<string name="invalid_dates">Invalid Dates</string>
 	<string name="start_service">Start Service</string>
 	<string name="stop_service">Stop Service</string>
+	<string name="ringer_mode">Ringer Mode</string>
+	<string name="dont_modify">Original</string>
+	<string name="vibrate">Vibrate</string>
+	<string name="silent">Silent</string>
+	<string name="service_status">Service Status: </string>
+	<string name="down">STOPPED</string>
+	<string name="copyright">idea &amp; developed by chsc4698@gmail.com</string>
+	<string name="original">Original</string>
+	<string name="running">RUNNING</string>
 </resources>

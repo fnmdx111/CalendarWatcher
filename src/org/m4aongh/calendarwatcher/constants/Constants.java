@@ -11,13 +11,16 @@ public class Constants {
 
 	public static final String APPLICATION_TAG = "m4aongh";
 
-	public static final String TIME_FORMAT = "HH:mm:ss";
 	public static final String KEY_ORIGINAL_RINGER_MODE = "original_ringer_mode";
-	public static final String KEY_EVENTS_CACHE = "events_cache";
+	public static final String KEY_RINGER_MODE = "ringer_mode";
+	public static final String KEY_EVENT_TITLE = "event_title";
 
 	public static final int DEFAULT_VALUE_ORIGINAL_RINGER_MODE = 0xffffffff;
 	public static final int MENU_ID_STOP_SERVICE = 1;
 	public static final int MENU_ID_START_SERVICE = 0;
+
+	public static final String ACTION_RESTORE_RINGER_MODE = "restore_ringer_mode";
+	public static final String ACTION_SET_RINGER_MODE = "set_ringer_mode";
 
 	public enum ContentType {
 		TYPE_CALENDAR,
