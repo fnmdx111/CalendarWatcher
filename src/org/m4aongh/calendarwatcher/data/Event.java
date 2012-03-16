@@ -7,18 +7,20 @@ package org.m4aongh.calendarwatcher.data;
  */
 public class Event {
 
-	private String title;
+	private final String title;
+	private final boolean isAllDay;
 
-	public Event(String title) {
+	public Event(String title, boolean isAllDay) {
 		this.title = title;
+		this.isAllDay = isAllDay;
 	}
 
 	public String getTitle() {
 		return title;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
+	public boolean isAllDay() {
+		return isAllDay;
 	}
 
 }

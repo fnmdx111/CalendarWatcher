@@ -22,8 +22,8 @@ public class EventsQuerier extends Querier<Event> {
 
 	private final int calendarID;
 	private final TraverseTransactor<Event> createNewEventObject = new TraverseTransactor<Event>() {
-		public Event transact(final Cursor input) {
-			return new Event(input.getString(0));
+		public Event transact(final Object input) {
+			return new Event(((Cursor)input).getString(0), !((Cursor)input).getString(1).equals("0"));
 		}
 	};
 
@@ -41,7 +41,10 @@ public class EventsQuerier extends Querier<Event> {
 	protected Cursor postQuery(Uri.Builder builder) {
 		return contentResolver.query(
 				builder.build(),
-				new String[] {"title"},
+				new String[] {
+						"title",
+						"allDay"
+				},
 				"Calendars._id=" + calendarID,
 				null,
 				"startDay ASC, startMinute ASC"
@@ -53,15 +56,16 @@ public class EventsQuerier extends Querier<Event> {
 		List<Event> events = new ArrayList<Event>();
 
 		Cursor cursor = postQuery(builder);
+		if (cursor == null) {
+			Log.w(Constants.APPLICATION_TAG, "null cursor when fetching events");
+			return null;
+		}
 		traverseCursor(
 				cursor,
 				createNewEventObject,
 				events
 		);
-		if (cursor != null) {
-			Log.w(Constants.APPLICATION_TAG, "null cursor when fetching events");
-			cursor.close();
-		}
+		cursor.close();
 
 		return events;
 	}

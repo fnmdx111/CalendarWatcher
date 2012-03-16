@@ -17,8 +17,8 @@ import java.util.List;
 public class CalendarQuerier extends Querier<Calendar> {
 
 	private final TraverseTransactor<Calendar> createNewCalendarObject = new TraverseTransactor<Calendar>() {
-		public Calendar transact(final Cursor input) {
-			return new Calendar(input.getString(1), input.getInt(0));
+		public Calendar transact(final Object input) {
+			return new Calendar(((Cursor)input).getString(1), ((Cursor)input).getInt(0));
 		}
 	};
 
@@ -47,15 +47,16 @@ public class CalendarQuerier extends Querier<Calendar> {
 		List<Calendar> calendars = new ArrayList<Calendar>();
 
 		Cursor cursor = postQuery(builder);
+		if (cursor == null) {
+			Log.w(Constants.APPLICATION_TAG, "null cursor when fetching calendars");
+			return null;
+		}
 		traverseCursor(
 				cursor,
 				createNewCalendarObject,
 				calendars
 		);
-		if (cursor != null) {
-			Log.w(Constants.APPLICATION_TAG, "null cursor when fetching calendars");
-			cursor.close();
-		}
+		cursor.close();
 
 		return calendars;
 	}
