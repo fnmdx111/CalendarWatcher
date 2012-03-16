@@ -1,10 +1,14 @@
 package org.m4aongh.calendarwatcher.utils;
 
+import android.content.ContentResolver;
 import android.widget.DatePicker;
+import org.m4aongh.calendarwatcher.data.CalendarQuerier;
 import org.m4aongh.calendarwatcher.data.Event;
 
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * User: chsc4698@gmail.com
@@ -42,4 +46,15 @@ public class Utilities {
 		return result;
 	}
 
+	public static Map<Integer, org.m4aongh.calendarwatcher.data.Calendar> getAllCalendars(ContentResolver resolver) {
+		CalendarQuerier querier = new CalendarQuerier(resolver);
+		List<org.m4aongh.calendarwatcher.data.Calendar> calendars = querier.fetchAllCalendar();
+
+		Map<Integer, org.m4aongh.calendarwatcher.data.Calendar> map = new HashMap<Integer, org.m4aongh.calendarwatcher.data.Calendar>();
+		for (org.m4aongh.calendarwatcher.data.Calendar calendar : calendars) {
+			map.put(calendar.getId(), calendar);
+		}
+
+		return map;
+	}
 }

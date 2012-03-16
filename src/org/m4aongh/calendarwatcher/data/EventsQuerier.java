@@ -23,7 +23,13 @@ public class EventsQuerier extends Querier<Event> {
 	private final int calendarID;
 	private final TraverseTransactor<Event> createNewEventObject = new TraverseTransactor<Event>() {
 		public Event transact(final Object input) {
-			return new Event(((Cursor)input).getString(0), !((Cursor)input).getString(1).equals("0"));
+			Cursor cursor = (Cursor)input;
+			return new Event(
+					cursor.getString(0),
+					!cursor.getString(1).equals("0"),
+					String.valueOf(cursor.getLong(2)),
+					String.valueOf(cursor.getLong(3))
+			);
 		}
 	};
 
@@ -43,7 +49,9 @@ public class EventsQuerier extends Querier<Event> {
 				builder.build(),
 				new String[] {
 						"title",
-						"allDay"
+						"allDay",
+						"dtstart",
+						"dtend"
 				},
 				"Calendars._id=" + calendarID,
 				null,
