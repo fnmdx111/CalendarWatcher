@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.util.Log;
 import android.widget.Toast;
+import org.m4aongh.calendarwatcher.application.CalendarWatcher;
 
 import static org.m4aongh.calendarwatcher.constants.Constants.*;
 
@@ -46,6 +47,11 @@ public class AlarmReceiver extends BroadcastReceiver {
 			audioManager.setRingerMode(iRingerMode);
 
 			Toast.makeText(context, "Event occurs", Toast.LENGTH_SHORT).show();
+		} else if (intent.getAction().equals(ACTION_DAILY_FETCH)) {
+			Log.v(APPLICATION_TAG, "received alarm intent(daily fetch)");
+
+			Intent toService = new Intent().setClass(context, WatcherService.class).setAction(ACTION_DAILY_FETCH);
+			context.startService(toService);
 		}
 	}
 

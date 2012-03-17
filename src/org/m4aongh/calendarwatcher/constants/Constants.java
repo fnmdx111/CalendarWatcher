@@ -21,6 +21,7 @@ public class Constants {
 
 	public static final String ACTION_RESTORE_RINGER_MODE = "restore_ringer_mode";
 	public static final String ACTION_SET_RINGER_MODE = "set_ringer_mode";
+	public static final String ACTION_DAILY_FETCH = "daily_fetch";
 
 	public enum ContentType {
 		TYPE_CALENDAR,

@@ -93,6 +93,13 @@ public class WatcherService extends Service {
 
 		Log.v(APPLICATION_TAG, "service started");
 
+		String action = intent.getAction();
+		if (action != null) {
+			if (action.equals(ACTION_DAILY_FETCH)) {
+				fetchEventsOfToday();
+			}
+		}
+
 		return START_STICKY;
 	}
 
@@ -156,6 +163,9 @@ public class WatcherService extends Service {
 				}
 			}
 		}
+		Log.v(APPLICATION_TAG, "events of today fetched");
+
+		((CalendarWatcher)getApplication()).setDateChangeAlarm();
 	}
 
 	@Override
@@ -166,6 +176,13 @@ public class WatcherService extends Service {
 			alarmManager.cancel(tuple.pendingIntent);
 
 			Log.v(APPLICATION_TAG, tuple.title + " canceled");
+		}
+
+		PendingIntent dateChangeAlarm = ((CalendarWatcher)getApplication()).dateChangeAlarm;
+		if (dateChangeAlarm != null) {
+			alarmManager.cancel(dateChangeAlarm);
+
+			Log.v(APPLICATION_TAG, "date change alarm canceled");
 		}
 
 		Log.v(APPLICATION_TAG, "service stopped");
