@@ -22,17 +22,27 @@
       </GlobalState>
     </option>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="wo" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="2f97fff8-8d96-4b32-b17b-006165bbe7cc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/app_icon.png" />
+      <change type="DELETED" beforePath="D:\workspace\CalendarWatcher\src\org\mad4a\calendarwatcher\AlarmReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\CalendarWatcher\src\org\mad4a\calendarwatcher\CalendarListAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\CalendarWatcher\src\org\mad4a\calendarwatcher\Settings.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\CalendarWatcher\src\org\mad4a\calendarwatcher\WatcherService.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\CalendarWatcher\src\org\mad4a\calendarwatcher\application\CalendarWatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\CalendarWatcher\src\org\mad4a\calendarwatcher\constants\Constants.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\CalendarWatcher\src\org\mad4a\calendarwatcher\data\Calendar.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\CalendarWatcher\src\org\mad4a\calendarwatcher\data\CalendarQuerier.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\CalendarWatcher\src\org\mad4a\calendarwatcher\data\Event.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\CalendarWatcher\src\org\mad4a\calendarwatcher\data\EventsQuerier.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\CalendarWatcher\src\org\mad4a\calendarwatcher\data\Querier.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\CalendarWatcher\src\org\mad4a\calendarwatcher\data\TraverseTransactor.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\CalendarWatcher\src\org\mad4a\calendarwatcher\utils\Utilities.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CalendarWatcher.iml" afterPath="$PROJECT_DIR$/CalendarWatcher.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/utils/Utilities.java" afterPath="$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/utils/Utilities.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
     </list>
     <ignored path="CalendarWatcher.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,91 +122,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/constants/Constants.java">
+      <file leaf-file-name="CalendarWatcher.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/application/CalendarWatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="49" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WatcherService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/WatcherService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="52" selection-start="4932" selection-end="4932" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="10" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="40" selection-start="230" selection-end="230" vertical-scroll-proportion="0.10471204">
-              <folding />
+            <state line="24" column="21" selection-start="595" selection-end="595" vertical-scroll-proportion="0.46035805">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="AlarmReceiver.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/AlarmReceiver.java">
+        <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/AlarmReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="0" selection-start="1589" selection-end="1589" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Event.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/data/Event.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="8" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventsQuerier.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/data/EventsQuerier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="8" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utilities.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/utils/Utilities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
+            <state line="9" column="15" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="CalendarListAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/CalendarListAdapter.java">
+        <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/CalendarListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="26" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="9" column="8" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#2514#2524#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Settings.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/Settings.java">
+        <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/Settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="0" selection-start="1512" selection-end="1512" vertical-scroll-proportion="0.0">
+            <state line="13" column="8" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Calendar.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/Calendar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalendarQuerier.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/CalendarQuerier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="8" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#516#689#0" expanded="true" />
+                <element signature="e#538#548#0" expanded="true" />
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#1368#1378#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Event.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/Event.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventsQuerier.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/EventsQuerier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="8" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#615#874#0" expanded="true" />
+                <element signature="e#637#644#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
+                <element signature="e#1549#1556#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Querier.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/Querier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TraverseTransactor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/TraverseTransactor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -210,29 +234,27 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
-    <option name="UPDATE_CHANGES_POLICY" value="STASH" />
-    <option name="LINE_SEPARATORS_CONVERSION" value="ASK" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
-        <option value="$PROJECT_DIR$/res/drawable/list_item_bkg_selector.xml" />
-        <option value="$PROJECT_DIR$/res/layout/calendar_list_item.xml" />
-        <option value="$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/data/Calendar.java" />
-        <option value="$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/data/Event.java" />
-        <option value="$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/CalendarListAdapter.java" />
-        <option value="$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/data/EventsQuerier.java" />
-        <option value="$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/Settings.java" />
         <option value="$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/constants/Constants.java" />
-        <option value="$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/WatcherService.java" />
-        <option value="$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/AlarmReceiver.java" />
-        <option value="$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/application/CalendarWatcher.java" />
-        <option value="$PROJECT_DIR$/README" />
-        <option value="$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/utils/Utilities.java" />
+        <option value="$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/data/CalendarQuerier.java" />
+        <option value="$PROJECT_DIR$/src/org/mad4a/calendarwatcher/AlarmReceiver.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/me/mad4a/calendarwatcher/WatcherService.java" />
+        <option value="$PROJECT_DIR$/src/me/mad4a/calendarwatcher/constants/Constants.java" />
+        <option value="$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/Calendar.java" />
+        <option value="$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/Event.java" />
+        <option value="$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/Querier.java" />
+        <option value="$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/TraverseTransactor.java" />
+        <option value="$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/EventsQuerier.java" />
+        <option value="$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/CalendarQuerier.java" />
+        <option value="$PROJECT_DIR$/src/me/mad4a/calendarwatcher/AlarmReceiver.java" />
+        <option value="$PROJECT_DIR$/src/me/mad4a/calendarwatcher/CalendarListAdapter.java" />
+        <option value="$PROJECT_DIR$/src/me/mad4a/calendarwatcher/Settings.java" />
+        <option value="$PROJECT_DIR$/src/me/mad4a/calendarwatcher/application/CalendarWatcher.java" />
       </list>
     </option>
   </component>
@@ -244,9 +266,10 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="675" />
-    <option name="width" value="1180" />
-    <option name="height" value="1080" />
+    <option name="x" value="545" />
+    <option name="y" value="129" />
+    <option name="width" value="1213" />
+    <option name="height" value="987" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -290,6 +313,9 @@
           </State>
           <State>
             <id>Control flow issues</id>
+          </State>
+          <State>
+            <id>CorrectnessLintAndroid</id>
           </State>
           <State>
             <id>Data flow issues</id>
@@ -346,6 +372,9 @@
             <id>Javadoc issues</id>
           </State>
           <State>
+            <id>LintAndroid</id>
+          </State>
+          <State>
             <id>Logging issues</id>
           </State>
           <State>
@@ -388,6 +417,9 @@
             <id>Security issues</id>
           </State>
           <State>
+            <id>SecurityLintAndroid</id>
+          </State>
+          <State>
             <id>Serialization issues</id>
           </State>
           <State>
@@ -409,6 +441,11 @@
             <id>toString() issues</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -438,7 +475,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -446,15 +482,9 @@
               <option name="myItemId" value="CalendarWatcher" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CalendarWatcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CalendarWatcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -464,14 +494,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CalendarWatcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calendarwatcher" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -490,10 +512,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="calendarwatcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -619,19 +637,42 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CalendarWatcher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CalendarWatcher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="options.lastSelected" value="IntelliLang.Configuration" />
+    <property name="project.structure.side.proportion" value="0.20000002" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -808,35 +849,37 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="675" y="0" width="1180" height="1080" extended-state="0" />
-    <editor active="false" />
+    <frame x="545" y="129" width="1213" height="987" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810616" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39935064" sideWeight="0.9919586" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16008037" sideWeight="0.3625541" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810616" sideWeight="0.67099565" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761484" sideWeight="0.67099565" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810616" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293124" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16008037" sideWeight="0.21212122" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39959568" sideWeight="0.6720779" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21774194" sideWeight="0.67099565" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.98975015" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30911064" sideWeight="0.9990999" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955726" sideWeight="0.6720779" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2532637" sideWeight="0.67189384" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275488" sideWeight="0.98975015" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DSM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="775" y="100" width="980" height="880" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27115503" sideWeight="0.6720779" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2710104" sideWeight="0.670282" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24567099" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3083512" sideWeight="0.9990999" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -872,8 +915,11 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="一些bug修正" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" value="new app icon : )" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -891,96 +937,131 @@
     <MESSAGE value="runs as a service, but i cannot have the ringer mode restored when the event has gone" />
     <MESSAGE value="runs as a service, restore complete, but some events cannot be read correctly" />
     <MESSAGE value="一些bug修正" />
+    <MESSAGE value="new app icon : )" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/androidsim/android-sdk-windows/platforms/android-7/android.jar!/android/app/Instrumentation.class">
+    <entry file="file://$PROJECT_DIR$/res/layout/calendar_list_item.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="16" selection-start="6167" selection-end="6167" vertical-scroll-proportion="0.33333334" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/data/Querier.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1049" selection-end="1049" vertical-scroll-proportion="0.0" />
+        <state line="33" column="46" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/data/CalendarQuerier.java">
+    <entry file="file://$PROJECT_DIR$/CalendarWatcher.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="4" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://D:/androidsim/android-sdk-windows/platforms/android-7/android.jar!/android/util/Log.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="464" selection-end="464" vertical-scroll-proportion="0.36649215" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/application/CalendarWatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="961" selection-end="961" vertical-scroll-proportion="0.73039216" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/data/Calendar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="4" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/constants/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="49" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/WatcherService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="52" selection-start="4932" selection-end="4932" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/AlarmReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1589" selection-end="1589" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/data/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="8" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/data/EventsQuerier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="8" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/CalendarListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="26" selection-start="1712" selection-end="1712" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1512" selection-end="1512" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/m4aongh/calendarwatcher/utils/Utilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="10" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+        <state line="39" column="43" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="40" selection-start="230" selection-end="230" vertical-scroll-proportion="0.10471204">
+        <state line="21" column="0" selection-start="869" selection-end="869" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/WatcherService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="15" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/constants/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/Calendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/Querier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/TraverseTransactor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/EventsQuerier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="8" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#615#874#0" expanded="true" />
+            <element signature="e#637#644#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#1549#1556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/data/CalendarQuerier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="8" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#516#689#0" expanded="true" />
+            <element signature="e#538#548#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#1368#1378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/AlarmReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="15" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/CalendarListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="8" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2514#2524#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="8" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/me/mad4a/calendarwatcher/application/CalendarWatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="21" selection-start="595" selection-end="595" vertical-scroll-proportion="0.46035805">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -993,7 +1074,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20000002" />
               </list>
             </option>
           </splitter-proportions>
@@ -1013,11 +1094,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Android</last-edited>
+          <last-edited>Android (CalendarWatcher)|Android</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20000002" />
               </list>
             </option>
           </splitter-proportions>
@@ -1028,7 +1109,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20000002" />
               </list>
             </option>
           </splitter-proportions>
@@ -1036,11 +1117,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>Android 4.0.3 Platform</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20000002" />
               </list>
             </option>
           </splitter-proportions>
@@ -1052,7 +1133,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20000002" />
               </list>
             </option>
           </splitter-proportions>
@@ -1074,7 +1155,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20000002" />
               </list>
             </option>
           </splitter-proportions>
