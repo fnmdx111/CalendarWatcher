@@ -3,13 +3,13 @@ package me.mad4a.calendarwatcher.data;
 import android.content.ContentResolver;
 import android.database.Cursor;
 import android.net.Uri;
+import android.provider.CalendarContract;
 import android.util.Log;
-import me.mad4a.calendarwatcher.constants.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import android.provider.CalendarContract.*;
+import static me.mad4a.calendarwatcher.constants.Constants.*;
 
 /**
  * User: chsc4698@gmail.com
@@ -18,9 +18,12 @@ import android.provider.CalendarContract.*;
  */
 public class CalendarQuerier extends Querier<Calendar> {
 
-	private final TraverseTransactor<Calendar> createNewCalendarObject = new TraverseTransactor<Calendar>() {
-		public Calendar transact(final Object input) {
-			return new Calendar(((Cursor)input).getString(1), ((Cursor)input).getInt(0));
+	private final TraverseHandler<Calendar> createNewCalendarObject = new TraverseHandler<Calendar>() {
+		public Calendar handle(final Object input) {
+			Cursor cursor = (Cursor)input;
+			String account = cursor.getString(1);
+			account = account.substring(0, account.indexOf("@"));
+			return new Calendar(cursor.getString(2) + " (" + account + ")", cursor.getInt(0));
 		}
 	};
 
@@ -36,15 +39,14 @@ public class CalendarQuerier extends Querier<Calendar> {
 	@Override
 	protected Cursor postQuery(Uri.Builder builder) {
 		return contentResolver.query(
-				Calendars.CONTENT_URI,
+				CalendarContract.Calendars.CONTENT_URI,
 				new String[] {
-						Calendars._ID,
-						Calendars.ACCOUNT_NAME,
-						Calendars.CALENDAR_DISPLAY_NAME
+						CalendarContract.Calendars._ID,
+						CalendarContract.Calendars.ACCOUNT_NAME,
+						CalendarContract.Calendars.CALENDAR_DISPLAY_NAME
 				},
-				"((" + Calendars.ACCOUNT_NAME + " = ?) AND (" + Calendars.ACCOUNT_TYPE + " = ?))",
+				"(" + CalendarContract.Calendars.ACCOUNT_TYPE + " = ?)",
 				new String[] {
-						Constants.USER_ID,
 						"com.google"
 				},
 				null
@@ -57,7 +59,7 @@ public class CalendarQuerier extends Querier<Calendar> {
 
 		Cursor cursor = postQuery(builder);
 		if (cursor == null) {
-			Log.w(Constants.APPLICATION_TAG, "null cursor when fetching calendars");
+			Log.w(APPLICATION_TAG, "Null cursor when fetching calendars");
 			return null;
 		}
 		traverseCursor(
