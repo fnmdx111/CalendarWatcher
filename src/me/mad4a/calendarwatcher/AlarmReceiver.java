@@ -21,15 +21,15 @@ public class AlarmReceiver extends BroadcastReceiver {
 		AudioManager audioManager = (AudioManager)context.getSystemService(Context.AUDIO_SERVICE);
 
 		if (intent.getAction().equals(ACTION_RESTORE_RINGER_MODE)) {
-			Log.v(APPLICATION_TAG, "received alarm intent(restore ringer mode) from event " + intent.getStringExtra(KEY_EVENT_TITLE));
+			Log.v(APPLICATION_TAG, "Received alarm intent (restore ringer mode) from event " + intent.getStringExtra(KEY_EVENT_TITLE));
 
-			int originalRingerMode = intent.getIntExtra(KEY_ORIGINAL_RINGER_MODE, DEFAULT_VALUE_ORIGINAL_RINGER_MODE);
-
+			int originalRingerMode = (Integer)intent.getExtras().get(KEY_ORIGINAL_RINGER_MODE);
 			if (originalRingerMode != DEFAULT_VALUE_ORIGINAL_RINGER_MODE) {
 				audioManager.setRingerMode(originalRingerMode);
+				Log.v(APPLICATION_TAG, "Ringer mode restored to " + originalRingerMode);
 			}
 		} else if (intent.getAction().equals(ACTION_SET_RINGER_MODE)) {
-			Log.v(APPLICATION_TAG, "received alarm intent(set ringer mode) from event " + intent.getStringExtra(KEY_EVENT_TITLE));
+			Log.v(APPLICATION_TAG, "Received alarm intent (set ringer mode) from event " + intent.getStringExtra(KEY_EVENT_TITLE));
 
 			String ringerMode = intent.getStringExtra(KEY_RINGER_MODE);
 			int iRingerMode = AudioManager.RINGER_MODE_SILENT;
@@ -39,15 +39,18 @@ public class AlarmReceiver extends BroadcastReceiver {
 			}
 
 			if (ringerMode.equals(context.getString(R.string.dont_modify))) {
+				Log.v(APPLICATION_TAG, "Ringer mode kept unmodified");
+
 				return;
 			} else if (ringerMode.equals(context.getString(R.string.vibrate))) {
 				iRingerMode = AudioManager.RINGER_MODE_VIBRATE;
 			}
 			audioManager.setRingerMode(iRingerMode);
+			Log.v(APPLICATION_TAG, "Ringer mode set to " + iRingerMode + " (" + ringerMode + ")");
 
 			Toast.makeText(context, "Event occurs", Toast.LENGTH_SHORT).show();
 		} else if (intent.getAction().equals(ACTION_DAILY_FETCH)) {
-			Log.v(APPLICATION_TAG, "received alarm intent(daily fetch)");
+			Log.v(APPLICATION_TAG, "Received alarm intent (daily fetch)");
 
 			Intent toService = new Intent().setClass(context, me.mad4a.calendarwatcher.WatcherService.class).setAction(ACTION_DAILY_FETCH);
 			context.startService(toService);
