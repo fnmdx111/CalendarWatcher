@@ -25,7 +25,6 @@ import static me.mad4a.calendarwatcher.constants.Constants.*;
 public class WatcherService extends Service {
 
 	private List<Event> events = new ArrayList<Event>();
-	private int originalRingerMode = DEFAULT_VALUE_ORIGINAL_RINGER_MODE;
 	private AlarmManager alarmManager;
 	private Set<Tuple> pushedPendingIntents;
 
@@ -80,8 +79,6 @@ public class WatcherService extends Service {
 
 		alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
 
-		originalRingerMode = ((AudioManager)getSystemService(AUDIO_SERVICE)).getRingerMode();
-
 		fetchEventsOfToday();
 
 		setAlarms();
@@ -91,7 +88,7 @@ public class WatcherService extends Service {
 	public int onStartCommand(Intent intent, int flag, int startId) {
 		super.onStartCommand(intent, flag, startId);
 
-		Log.v(APPLICATION_TAG, "service started");
+		Log.v(APPLICATION_TAG, "Service started");
 
 		String action = intent.getAction();
 		if (action != null) {
@@ -103,14 +100,18 @@ public class WatcherService extends Service {
 		return START_STICKY;
 	}
 
+	private int getCurrentRingerMode() {
+		return ((AudioManager)getSystemService(AUDIO_SERVICE)).getRingerMode();
+	}
+
 	private void setAlarm(long time, String action, String title) {
 		Intent intent = new Intent(this, AlarmReceiver.class).setAction(action).putExtra(KEY_EVENT_TITLE, title);
 		if (action.equals(ACTION_RESTORE_RINGER_MODE)) {
-			intent.putExtra(KEY_ORIGINAL_RINGER_MODE, originalRingerMode);
+			intent.putExtra(KEY_ORIGINAL_RINGER_MODE, getCurrentRingerMode());
 		} else if (action.equals(ACTION_SET_RINGER_MODE)) {
 			Date now = new Date();
 			if (time < now.getTime()) {
-				Log.v(APPLICATION_TAG, "trigger time has changed from " + new Date(time) + " to " + new Date());
+				Log.v(APPLICATION_TAG, "Trigger time has changed from " + new Date(time) + " to " + new Date());
 
 				time = now.getTime();
 			}
@@ -142,6 +143,7 @@ public class WatcherService extends Service {
 
 				continue;
 			}
+
 			setAlarm(event.getStartingTimeDate().getTime(), ACTION_SET_RINGER_MODE, event.getTitle());
 			setAlarm(event.getEndingTimeDate().getTime(), ACTION_RESTORE_RINGER_MODE, event.getTitle());
 
@@ -152,7 +154,7 @@ public class WatcherService extends Service {
 
 	private void fetchEventsOfToday() {
 		for (Calendar calendar: ((CalendarWatcher)getApplication()).checkedCalendars) {
-			Log.v(APPLICATION_TAG, "processing " + calendar.getTitle());
+			Log.v(APPLICATION_TAG, calendar.getTitle() + ": calendar processed");
 
 			EventsQuerier querier = new EventsQuerier(getContentResolver(), calendar.getId());
 			List<Event> eventsOfThisCalendar = querier.fetchEventsOfToday();
@@ -163,7 +165,7 @@ public class WatcherService extends Service {
 				}
 			}
 		}
-		Log.v(APPLICATION_TAG, "events of today fetched");
+		Log.v(APPLICATION_TAG, "Today's events fetched");
 
 		((CalendarWatcher)getApplication()).setDateChangeAlarm();
 	}
@@ -182,10 +184,10 @@ public class WatcherService extends Service {
 		if (dateChangeAlarm != null) {
 			alarmManager.cancel(dateChangeAlarm);
 
-			Log.v(APPLICATION_TAG, "date change alarm canceled");
+			Log.v(APPLICATION_TAG, "Date change alarm canceled");
 		}
 
-		Log.v(APPLICATION_TAG, "service stopped");
+		Log.v(APPLICATION_TAG, "Service stopped");
 		super.onDestroy();
 	}
 
