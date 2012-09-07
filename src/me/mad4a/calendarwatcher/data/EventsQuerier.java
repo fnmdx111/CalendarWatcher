@@ -4,6 +4,7 @@ import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.database.Cursor;
 import android.net.Uri;
+import android.provider.CalendarContract;
 import android.text.format.DateUtils;
 import android.util.Log;
 import me.mad4a.calendarwatcher.constants.Constants;
@@ -21,9 +22,12 @@ import java.util.List;
 public class EventsQuerier extends Querier<Event> {
 
 	private final int calendarID;
-	private final TraverseTransactor<Event> createNewEventObject = new TraverseTransactor<Event>() {
-		public Event transact(final Object input) {
+	private final TraverseHandler<Event> createNewEventObject = new TraverseHandler<Event>() {
+		public Event handle(final Object input) {
 			Cursor cursor = (Cursor)input;
+
+			Log.v(Constants.APPLICATION_TAG, "handled " + cursor.getString(0));
+
 			return new Event(
 					cursor.getString(0),
 					!cursor.getString(1).equals("0"),
@@ -40,7 +44,7 @@ public class EventsQuerier extends Querier<Event> {
 
 	@Override
 	protected Uri.Builder genBuilder() {
-		return Uri.parse(Constants.getContentUri(Constants.ContentType.TYPE_EVENTS)).buildUpon();
+		return CalendarContract.Instances.CONTENT_URI.buildUpon();
 	}
 
 	@Override
@@ -48,13 +52,15 @@ public class EventsQuerier extends Querier<Event> {
 		return contentResolver.query(
 				builder.build(),
 				new String[] {
-						"title",
-						"allDay",
-						"dtstart",
-						"dtend"
+						CalendarContract.Instances.TITLE,
+						CalendarContract.Instances.ALL_DAY,
+						CalendarContract.Instances.DTSTART,
+						CalendarContract.Instances.DTEND,
 				},
-				"Calendars._id=" + calendarID,
-				null,
+				CalendarContract.Instances.CALENDAR_ID + " = ?",
+				new String[] {
+						Integer.toString(this.calendarID)
+				},
 				"startDay ASC, startMinute ASC"
 		);
 	}
