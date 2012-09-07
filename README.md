@@ -1,6 +1,6 @@
 ## CalendarWatcher ##
 
-##### 监视日历中的事件，并自动调整铃声模式 #####
+##### 监视日历中的事件，并自动调整铃声模式 (ics or higher only) #####
 
 
 #### TODO ####
@@ -40,6 +40,6 @@
 	第一次commit
 
 
-<mailto:chsc4698@gmail.com>
+author: <mailto:chsc4698@gmail.com>
 
 this project is licensed under gpl, except the app icon :p
