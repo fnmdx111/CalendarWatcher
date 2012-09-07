@@ -5,6 +5,7 @@ import android.app.ActivityManager;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 import me.mad4a.calendarwatcher.application.CalendarWatcher;
 import me.mad4a.calendarwatcher.data.CalendarQuerier;
+
+import static me.mad4a.calendarwatcher.constants.Constants.*;
 
 public class Settings extends Activity {
 
@@ -77,6 +80,7 @@ public class Settings extends Activity {
 				ToggleButton toggleButton = (ToggleButton)view;
 				toggleButton.setChecked(true);
 				((CalendarWatcher)getApplication()).globalRingerMode = (String)toggleButton.getTextOn();
+				Log.d(APPLICATION_TAG, "Global ringer mode set to " + ((CalendarWatcher)getApplication()).globalRingerMode);
 			}
 		};
 
