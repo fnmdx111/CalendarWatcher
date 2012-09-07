@@ -6,12 +6,12 @@ package me.mad4a.calendarwatcher.data;
  * Date: 12-3-15
  * all rights reserved
  */
-public interface TraverseTransactor<T> {
+public interface TraverseHandler<T> {
 
 	/**
 	 * @param input do not change!!! readonly!!!
 	 * @return transacted value
 	 */
-	public T transact(final Object input);
+	public T handle(final Object input);
 
 }
